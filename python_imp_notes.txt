@@ -50,9 +50,22 @@ Source : https://www.python.org
 Tutorial | Python's syntax and features  *
 Language reference | Syntax and language elements |
 
-Other Good Website
-------------------
-https://www.geeksforgeeks.org/angular-js/angularjs/
+
+To refer later
+--------------
+The Python Standard Library. 
+The Python Tutorial.
+Extending and Embedding the Python Interpreter 
+Python/C API Reference Manual  
+https://www.geeksforgeeks.org/angular-js/angularjs/ | Learning platform
+https://huggingface.co/ | AI Community
+https://docs.djangoproject.com/en/5.2/intro/tutorial01/
+Operations supported by Timedelta Class
+Integer literals
+Floating-point literals
+git py
+https://www.greatfrontend.com/
+
 
 Python, pointers to note
 
@@ -998,3 +1011,153 @@ d = deque(["task1", "task2", "task3"])
 d.append("task4")
 print("Handling", d.popleft())
 
+Explicit line joining
+if 1900 < year < 2100 and 1 <= month <= 12 \
+   and 1 <= day <= 31 and 0 <= hour < 24 \
+   and 0 <= minute < 60 and 0 <= second < 60:   # Looks like a valid date
+        return 1
+		
+Implicit line joining
+month_names = ['Januari', 'Februari', 'Maart',      # These are the
+               'April',   'Mei',      'Juni',       # Dutch names
+               'Juli',    'Augustus', 'September',  # for the months
+               'Oktober', 'November', 'December']   # of the year
+			   
+
+Indented piece of Python code:
+def perm(l):
+        # Compute the list of all permutations of l
+    if len(l) <= 1:
+                  return [l]
+    r = []
+    for i in range(len(l)):
+             s = l[:i] + l[i+1:]
+             p = perm(s)
+             for x in p:
+              r.append(l[i:i+1] + x)
+    return r
+
+>>> l='212'
+>>> perm(l)
+['221', '212', '221', '212', '122', '122']
+
+Keywords
+--------
+False      await      else       import     pass
+None       break      except     in         raise
+True       class      finally    is         return
+and        continue   for        lambda     try
+as         def        from       nonlocal   while
+assert     del        global     not        with
+async      elif       if         or         yield
+
+Datetime
+--------
+from datetime import datetime
+date_time=datetime(year=2017,month=8,day=6)
+print(f"{date_time:%B %d, %Y}")
+
+>>> August 06, 2017
+
+>>> foo = 'bar'
+>>> f"{foo}"
+'bar'
+>>> f"{foo = }"
+"foo = 'bar'"
+>>>
+
+>>> from datetime import datetime
+>>> date_time=datetime(year=2025,month=8,day=6)
+>>> print(date_time)
+2025-08-06 00:00:00
+>>> print(date_time.date())
+2025-08-06
+
+Important Date Class Methods : To gothrough
+
+from datetime import time
+
+# Create time object with hour, minute and second
+my_time = time(13, 24, 56)
+print("Entered time:", my_time)
+
+>>> Entered time: 13:24:56
+
+# Time object with only minute specified
+my_time = time(minute=12)
+print("Time with one argument:", my_time)
+
+# Time object with default (00:00:00)
+my_time = time()
+print("Time without argument:", my_time)
+
+# time(hour=26)      → ValueError: hour must be in 0..23
+# time(hour='23')    → TypeError: string passed instead of int
+
+Entered time: 13:24:56
+Time with one argument: 00:12:00
+Time without argument: 00:00:00
+
+from datetime import datetime
+
+# Initializing constructor
+a = datetime(1999, 12, 12)
+print(a)
+
+# Initializing constructor with time parameters as well
+a = datetime(1999, 12, 12, 12, 12, 12, 342380)
+print(a)
+
+------------------------------------------------------------------------------
+
+from datetime import datetime, timedelta
+
+# Get the current date and time
+now = datetime.now()
+print("Current Date & Time:", now)
+
+# Add 2 years (approx. 730 days)
+after_2_years = now + timedelta(days=730)
+print("After 2 Years:", after_2_years)
+
+# Add 2 days
+after_2_days = now + timedelta(days=2)
+print("After 2 Days:", after_2_days)
+
+-------------------------------------------------------------------------------
+from datetime import datetime
+from pytz import timezone
+
+format = "%Y-%m-%d %H:%M:%S %Z%z"
+now_utc = datetime.now(timezone('UTC')) # Current time in UTC
+print(now_utc.strftime(format))
+
+timezones = ['Asia/Kolkata', 'Europe/Kiev', 'America/New_York']
+for tzone in timezones:
+    now_asia = now_utc.astimezone(timezone(tzone))  # Convert to Asia/Kolkata time zone
+    print(now_asia.strftime(format))
+	
+	
+--------------------------------------------------------------------------------
+a = ["a", "b", "c"]
+print(f"List a contains:\n{"\n".join(a)}")
+
+Operators
+---------
++       -       *       **      /       //      %      @
+<<      >>      &       |       ^       ~       :=
+<       >       <=      >=      ==      !=
+
+
+Class
+-----
+class Meta(type):
+    pass
+
+class MyClass(metaclass=Meta):
+    pass
+
+class MySubclass(MyClass):
+    pass
+	
+	
