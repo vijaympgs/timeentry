@@ -10,6 +10,16 @@ Learning Platforms for Python
 Best
 https://edube.org/learn/pe-1/programming-absolute-basics-compilation-vs-interpretation-11
 
+AI LIST
+........
+Claude
+Gemini
+ChatGPT
+perplexity
+Grok
+GPT5
+
+
 3.1 PCEP™ – Certified Entry-Level Python Programmer
 https://pythoninstitute.org/pcep
 
