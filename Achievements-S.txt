@@ -1,0 +1,49 @@
+1.	Process Improvements 
+•	Established the practice of logging the story points/estimate for each Story/Task under an Epic/feature, the subsets of a Project.
+•	Effective Resource Planning/Capacity Planning/Allocation for each Sprint delivery
+•	Created Clear and Informative Weekly Progress Dashboards/Reports/Retrospective Presentations/Reports post the “Major Feature Rollouts”, to the Management.
+•	Sprint/ Release Dashboards for the previous, current and the next sprints citing the progress of the tickets assigned for each sprints.
+•	Created an effective Dash Board pattern with the complete visibility of the projects/epics/stories for the Weekly Management Review Meeting.
+•	Created an excel based Project Planner automated for any project plan including the weekly offs, calendar holidays and planned leaves and used for  various project planning.
+2.	Key Deliveries, Agile/Scrum Project Management
+•	Managed the Daily/Weekly Scrum/Sprint events – for the teams,
+o	Cart and Checkout, Shopping Cart, Pricing, Rewards and Referrals
+•	Played the vital role as a “Program Manager” for the successful rollout of  “VIP Management Program 2024” for www.samsung.com/us , managed the below teams by daily scrum/sprint planning/ tracking and Sprint Retrospective events.  
+o	Lower Funnel | Cart and Checkout , My Rewards
+o	ShopApp
+o	Upper Funnel | Pre-Purchase
+o	Backend | Rewards,Orders,Subscription,OPS Tools,Fulfillment,Email Template
+•	Managed the Scrum/Sprint events and successfully executed the migration of Cart/Checkout from vue.js code base to next.js platform – “Cart SPA Migration”, Cross Border Rewards Points Conversion Initiative.
+•	Scrum meets/Tracking, and delivery of 2024 & 2025 Roadmap items, the features/projects curated by the Product team.
+•	Lead the release of U-Tag Requirements.
+3.	Functional Contribution
+•	Triaging of the open tickets, functionally and technical debug to understand the respond for the root cause.
+•	Understand the issues reported (weekly) by TechOps team, and responded with the Issue details and learnings learnt from the issue fix.
+•	Reproduce of the tickets (assigned) reported in the Production environment.
+•	Epic/Story creation for the features reported by PMs, Cross-functional teams after a clear understanding of the feature requirements for various projects,
+o	Cart SPA Migration | 2024 – 2025 Roadmap items | Features reported by PMs as and when
+4.	Recruitment 
+•	Participated in the Hiring Process of backend resources, broadcast of openings to Partners, Submit CVs for shortlisting, Schedule Interviews for the Shortlisted candidates, initiate of the On-boarding process.
+5.	Outcome
+•	Big-picture to all the stakeholders (Roadmap, Enhancements)
+•	Establishment of Weekly Sprint Planning call with the PMs for the next sprints
+•	Estimation Dashboard, Capacity planning showcase
+•	Prioritization of the tickets/delivery items
+•	Clarifications/Arrive Clarity before any Sprint Start
+•	Periodic grooming as part of Pre-Sprint
+•	Habit of estimation (story points) for each Stories, Tasks by engineering team
+•	Pattern of delivery through time-bound sprints
+•	Increased Quality Delivery
+
+6.	Strengths  
+•	Rich experience and extensive knowledge Domain Knowledge (Retail ERP, POS, e-Commerce, HRMS, various tailor made, CRM)
+•	Strong logical/technical knowledge in Microsoft Frontend/Backend technologies.
+•	Execution of various product developments – Retail Backend, Point of Sale, Integrations with 3rd party applications – Loyalty engines, SAP IS Retail, various finance systems.
+•	Expertise in Business Reporting Tools –Power BI and Big Data to an extent.
+•	Good automation skills in the development of Microsoft Macros for Office suite, and Google script automations.
+•	Good Documentation skills.
+•	Quality Oriented, Mentoring and Team Collaboration.
+
+
+ 
+
