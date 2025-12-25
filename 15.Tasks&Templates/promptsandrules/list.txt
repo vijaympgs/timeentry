@@ -1,0 +1,115 @@
+Folder PATH listing for volume New Volume
+Volume serial number is 8AFF-8E88
+D:.
+|   00.masterindex.md
+|   list.txt
+|   prompt.md
+|   refer_for_new_bbp.md
+|   TaskList.md
+|   
++---0.1HR Dashboard
+|       0.1 HR Dashboard Overview.md
+|       
++---01.Employee Management
+|       1.1 Employee Directory.md
+|       1.2 Organizational Chart.md
+|       1.3 Employee Self-Service.md
+|       1.4 Document Management.md
+|       1.5 Employee Lifecycle.md
+|       
++---02.Talent Acquisition
+|       2.1 Job Requisitions.md
+|       2.2 Candidate Management.md
+|       2.3 Interview Scheduling.md
+|       2.4 Offer Management.md
+|       2.5 Onboarding.md
+|       
++---03.Compensation & Payroll
+|       3.1 Salary Structure.md
+|       3.2 Payroll Processing.md
+|       3.3 Payslip Generation.md
+|       3.4 Tax Deductions.md
+|       3.5 Benefits Administration.md
+|       3.6 Compensation Planning.md
+|       
++---04.Time & Attendance
+|       4.1 Attendance Tracking.md
+|       4.2 Shift Management.md
+|       4.3 Leave Management.md
+|       4.4 Overtime Management.md
+|       4.5 Time Off Requests.md
+|       
++---05.Performance Management
+|       5.1 Goal Setting.md
+|       5.2 Performance Reviews.md
+|       5.3 360-Degree Feedback.md
+|       5.4 Performance Improvement Plans.md
+|       5.5 Competency Management.md
+|       5.6 Performance Analytics.md
+|       
++---06.Learning & Development
+|       6.1 Training Programs.md
+|       6.2 Course Management.md
+|       6.3 Skill Assessment.md
+|       6.4 Certification Tracking.md
+|       6.5 Learning Paths.md
+|       6.6 Training Reports.md
+|       
++---07.Employee Engagement & Recognition
+|       7.1 Employee Surveys.md
+|       7.2 Recognition Programs.md
+|       7.3 Rewards & Incentives.md
+|       7.4 Employee Feedback.md
+|       7.5 Engagement Analytics.md
+|       7.6 Culture Initiatives.md
+|       TaskList.md
+|       
++---08.Workforce Planning & Analytics
+|       8.1 Workforce Planning.md
+|       8.2 Headcount Analytics.md
+|       8.3 Succession Planning.md
+|       8.4 Talent Analytics.md
+|       8.4 Talent Mobility & Succession Planning.md
+|       8.5 Diversity & Inclusion.md
+|       8.6 HR Metrics Dashboard.md
+|       TaskList.md
+|       
++---09.Compliance & Policies
+|       9.1 Policy Management.md
+|       9.2 Compliance Tracking.md
+|       9.3 Labor Law Compliance.md
+|       9.4 Audit Management.md
+|       9.5 Document Repository.md
+|       9.6 Compliance Reports.md
+|       
++---10.Offboarding & Exit Management
+|       10.1 Exit Interviews.md
+|       10.2 Clearance Process.md
+|       10.3 Final Settlement.md
+|       10.4 Alumni Network.md
+|       10.5 Exit Analytics.md
+|       
++---11.HR Reports & Analytics
+|       11.1 Headcount Reports.md
+|       11.2 Turnover Analysis.md
+|       11.3 Recruitment Analytics.md
+|       11.4 Payroll Reports.md
+|       11.5 Attendance Reports.md
+|       11.6 Custom HR Reports.md
+|       
++---12.Access&Security
+|       12.1 Role-based Access.md
+|       12.2 Data Privacy.md
+|       12.3 Audit Logs.md
+|       12.4 Security Settings.md
+|       
++---13.Integrations & Configuration
+|       13.1 Payroll Integration.md
+|       13.2 Background Check Integration.md
+|       13.3 Benefits Provider Integration.md
+|       13.4 Learning Management System.md
+|       13.5 HR System Settings.md
+|       
+\---14.Advanced-BOTS
+        HR-Bot-Ecosystem-Recommendations.md
+        
