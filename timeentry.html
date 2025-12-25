@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monthly Timesheet</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        background-color: #f0f0f0;
+        margin: 0 auto;
+        padding: 0px;
+        width:80%
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    .container {
+        width: 900px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        float:left
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"] {
+        width: calc(50% - 10px);
+        padding: 6px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px; /* Adjusted font size */
+    }
+    input[type="text"]{
+        width: 50px;
+    }
+    input#month{
+        width:100px;
+    }
+    input#holidays, input#leaves{
+        width: 80px;
+    }
+    input[type="number"] {
+        width: 70px;
+    }
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 10px;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .weekend {
+        background-color: #f9f9f9;
+    }
+    .summary {
+        width: 400px;
+        margin: 0px 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        float:left
+    }
+    .summary p span {
+        font-weight: bold;
+    }
+</style>
+</head>
+<body align="center">
+
+<h1>Monthly Timesheet</h1>
+<div class="container">
+    <div>
+        <label for="month">Month:</label>
+        <input type="text" id="month">
+        <label for="year">Year:</label>
+        <input type="number" id="year">
+        <label for="holidays" style="background-color: rgb(148, 184, 150)">Declared Holidays:</label>
+        <input type="text" id="holidays">
+        <label for="leaves" style="background-color: cyan">Leave(s):</label>
+        <input type="text" id="leaves">
+        <span style="display:none">Default Hours<input type="text" id="defaultHours" value="8"></span>
+        <button onclick="generateTimesheet()">Process</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Date</th>
+                <th>Hours Worked</th>
+            </tr>
+        </thead>
+        <tbody id="timesheetBody">
+        </tbody>
+    </table>
+
+</div>
+
+<div class="summary" id="summary">
+    <h2>Summary</h2>
+    <p>Total Days: <span id="totalDays"></span></p>
+    <p># of Weekly Offs: <span id="weeklyOffs"></span></p>
+    <p style="background-color: rgb(148, 184, 150)"># of Holidays: <span id="holidaysCount"></span></p>
+    <p style="background-color: cyan"># of Leaves: <span id="leavesCount"></span></p>
+    <p>Total Days Worked: <span id="totalDaysWorked"></span></p>
+    <p>Total Hours: <span id="totalHours"></span></p>
+</div>
+<script>
+
+function getHolidaysByMonthYear(month, year) {
+    if(month <= 9){
+        month = "0"+month;
+    }
+	
+	//Issue Point
+	//let holidays = {"20-06-2025":  "Christmas  - Thursday"};
+	let holidays = {
+					"01-01-2025": "New Year - Wednesday",
+					"14-01-2025": "Pongal/Makara Sankranti - Tuesday",
+					"31-03-2025": "Id-ul-Fitr - Monday",
+					"14-04-2025": "Tamil New year/Dr Ambedkar Jayanti/Vishu - Monday",
+					"01-05-2025": "May Day/Maharashtra Day - Thursday",
+					"15-08-2025": "Independence Day - Friday",
+					"27-08-2025": "Ganesh Chaturthi - Wednesday",
+					"01-10-2025": "Dussehra/Ayudha Pooja/Durga Puja (Navami) - Wednesday",
+					"02-10-2025": "Mahatma Gandhi's Birthday/Dussehra - Thursday",
+					"20-10-2025": "Diwali - Monday",
+					"21-10-2025": "Diwali - Tuesday",
+					"25-12-2025": "Christmas - Thursday"
+	               };
+				   
+    localStorage.setItem("holidays", JSON.stringify(holidays));
+	//Issue Point
+	
+    const holidays1 = JSON.parse(localStorage.getItem("holidays")) || {};
+    const searchStr = `-${month}-${year}`;
+    const results = Object.entries(holidays1)
+        .filter(([date]) => date.endsWith(searchStr))
+        .map(([date, reason]) => ({
+            date: parseInt(date.split('-')[0], 10), // Extract day and convert to number
+            reason
+        }));
+
+    const indexedArray = [];
+    for (const { date, reason } of results) {
+        indexedArray[date] = reason; // Assign reason at index = day number
+    }
+    const daysOnly = results.map(h => h.date); // Extract only day numbers
+    return [indexedArray, ...daysOnly];
+}
+
+// Function to generate the timesheet based on user input
+function generateTimesheet() {
+
+    const month = document.getElementById('month').value;
+    const year = document.getElementById('year').value;
+	
+	// Issue Point
+   // const holidays = document.getElementById('holidays').value;
+   // Issue Point
+   
+    const leaves = document.getElementById('leaves').value;
+    const defaultHours = parseInt(document.getElementById('defaultHours').value);
+
+    const monthIndex = new Date(Date.parse(month + ' 1, ' + year)).getMonth();
+    const daysInMonth = new Date(year, monthIndex + 1, 0).getDate(); // Total days in the month
+    const monthName = new Date(year, monthIndex).toLocaleString('default', { month: 'long' });
+
+
+    [listed, ...returned_holidays] = getHolidaysByMonthYear(monthIndex+1, year);
+    document.getElementById('holidays').value = returned_holidays;
+    const holidays = document.getElementById('holidays').value; 
+
+
+    document.getElementById('month').value = monthName;
+
+    const timesheetBody = document.getElementById('timesheetBody');
+    const summary = document.getElementById('summary');
+    let totalDays = 0;
+    let weeklyOffs = 0;
+    let leavesCount = 0;
+    let holidaysCount = 0;
+    let totalHours = 0;
+    let totalDaysWorked = 0;
+
+    timesheetBody.innerHTML = '';
+
+    let sNo = 1;
+    for (let day = 1; day <= daysInMonth; day++) {
+    const date = new Date(year, monthIndex, day);
+
+    const row = document.createElement('tr');
+    const cellSNo = document.createElement('td');
+    const cellDate = document.createElement('td');
+    const cellHours = document.createElement('td');
+
+    cellSNo.textContent = sNo++;
+    cellDate.textContent = date.toDateString();
+    
+    if (date.getDay() === 0 || date.getDay() === 6) {
+        row.classList.add('weekend');
+        row.style.backgroundColor = 'lightgrey'; // Highlight weekend rows
+        cellDate.setAttribute('colspan', '2');
+        cellDate.textContent = 'Sat/Sun';
+        row.appendChild(cellSNo);
+        row.appendChild(cellDate);
+        timesheetBody.appendChild(row);
+        weeklyOffs++;
+        totalDays++;
+        continue; // Skip adding cellHours for weekends
+    }
+
+    const inputHours = document.createElement('input');
+    inputHours.type = 'number';
+    inputHours.style.width = '50px';
+    inputHours.style.textAlign = 'center';
+    inputHours.readOnly = true;
+    inputHours.addEventListener('input', updateTotalHours);
+
+    // Check if the current day is a holiday or leave day
+    if (holidays.split(',').map(Number).includes(day)) {
+        inputHours.value = 0; // Set hours worked to zero for holidays
+        row.style.backgroundColor = 'rgb(148, 184, 150)'; // Highlight holiday rows
+        cellDate.innerHTML +=  "<br>"+listed[day]; 
+        holidaysCount++;
+    } else if (leaves.split(',').map(Number).includes(day)) {
+        inputHours.value = 0; // Set hours worked to zero for leaves
+        row.style.backgroundColor = 'cyan'; // Highlight leave rows
+        leavesCount++;
+    } else {
+        inputHours.value = defaultHours;
+        totalHours += defaultHours;
+        totalDaysWorked++;
+    }
+
+    cellHours.appendChild(inputHours);
+    row.appendChild(cellSNo);
+    row.appendChild(cellDate);
+    row.appendChild(cellHours);
+    timesheetBody.appendChild(row);
+}
+
+
+    totalDays = daysInMonth; // Update total days to match the days in the month
+
+    summary.style.display = 'block';
+    document.getElementById('totalDays').textContent = totalDays;
+    document.getElementById('weeklyOffs').textContent = weeklyOffs;
+    document.getElementById('holidaysCount').textContent = holidaysCount;
+    document.getElementById('leavesCount').textContent = leavesCount;
+    document.getElementById('totalDaysWorked').textContent = totalDaysWorked;
+    document.getElementById('totalHours').textContent = totalHours;
+}
+
+
+    // Function to update total hours when the user modifies the hours worked
+    function updateTotalHours() {
+        let totalHours = 0;
+        const inputs = document.querySelectorAll('#timesheetBody input[type="number"]');
+        inputs.forEach(input => {
+            totalHours += parseInt(input.value) || 0;
+        });
+        document.getElementById('totalHours').textContent = totalHours;
+    }
+
+    // Automatically populate current month and year
+    document.getElementById('month').value = new Date().toLocaleString('default', { month: 'long' });
+    document.getElementById('year').value = new Date().getFullYear();
+
+    // Get URL parameters for leaves and holidays
+    const urlParams = new URLSearchParams(window.location.search);
+    const leavesParam = urlParams.get('leaves');
+    const holidaysParam = urlParams.get('holidays');
+    const monthParam = urlParams.get("month");
+    const yearParam = urlParams.get("year");
+
+    if (leavesParam) {
+        document.getElementById('leaves').value = leavesParam;
+    }
+    if (holidaysParam) {
+        document.getElementById('holidays').value = holidaysParam;
+    }
+    if(monthParam){
+        document.getElementById('month').value = monthParam;
+    }
+    if(yearParam){
+        document.getElementById('year').value = yearParam;
+    }
+
+    // Generate timesheet initially
+    generateTimesheet();
+</script>
+
+</body>
+</html>
