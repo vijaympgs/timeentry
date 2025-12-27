@@ -1,0 +1,210 @@
+
+1. Python Basics 1 : pythoninstitute.org, www.python.org - Completed
+
+In Progress
+1. AI for Everyone https://www.coursera.org/learn/ai-for-everyone
+2. Generative AI for Everyone https://www.coursera.org/learn/generative-ai-for-everyone
+3. MIT Sloan  https://mitsloan.mit.edu/ideas-made-to-matter/machine-learning-explained
+4. Udemy - Scrum
+
+Not STarted
+1. Django Tutorial & First App Build 
+   https://docs.djangoproject.com/en/5.2/intro/tutorial01/
+2. Python Certification : https://www.coursera.org/learn/python-crash-course 
+4. 
+
+Ramp up Plan
+------------
+Learning Platforms for Python
+-----------------------------
+1. Python Tutorial  Source : https://www.python.org
+2. https://pythoninstitute.org/
+3. https://git-scm.com/downloads/win
+
+Best
+https://edube.org/learn/pe-1/programming-absolute-basics-compilation-vs-interpretation-11
+
+3.1 PCEP™ – Certified Entry-Level Python Programmer
+https://pythoninstitute.org/pcep
+
+3.2 PCAP™ – Certified Associate Python Programmer
+https://pythoninstitute.org/pcap
+
+
+3.3 Crash course on Python by Google
+https://www.coursera.org/learn/python-crash-course
+
+3.4. Hugging face
+	 Firebase
+	 Claude
+	 *** Model, Training, AI ****
+	 *** Alogirthms extract from Claude ***
+
+2. HTML
+3. CSS
+4. Javascript
+5. React JS
+6. Node JS
+
+ML/AI Reading Plan for PMs
+--------------------------
+Intro
+7. AI for Everyone https://www.coursera.org/learn/ai-for-everyone
+8. Generative AI for Everyone https://www.coursera.org/learn/generative-ai-for-everyone
+9. MIT Sloan  https://mitsloan.mit.edu/ideas-made-to-matter/machine-learning-explained
+
+Diving Deep
+10. Google ML https://developers.google.com/machine-learning/foundational-courses
+
+Use cases
+11. AWS – Gen AI Use Cases 
+https://aws.amazon.com/ai/generative-ai/use-cases/?ams%23interactive-card-vertical%23pattern-data-2054833178.filter=%257B%2522filters%2522%253A%255B%255D%257D&ams%23interactive-card-vertical%23pattern-data-2054833177.filter=%257B%2522filters%2522%253A%255B%255D%257D
+12. GCP – Gen AI Use Cases
+https://cloud.google.com/use-cases/generative-ai?hl=en
+13. Azure – AI Use Cases
+https://www.microsoft.com/en-us/ai/ai-customer-stories
+
+Get Technical
+14.Kaggle - Learn (Python)
+https://www.kaggle.com/learn
+
+15.Kaggle – Competitions (glance through to understand different domains ML / AI is used)
+https://www.kaggle.com/competitions
+
+AI Project Management
+16. The Art of AI Product Development book (paid)
+https://www.manning.com/books/the-art-of-ai-product-development
+
+17. AI Product Manager Course (paid)
+https://www.productmanagementexercises.com/ai-product-manager
+
+
+Python Tutorial - Coverage  - 08/05/2025
+-----------------------------------------
+Source : https://www.python.org
+
+Tutorial | Python's syntax and features  *
+Language reference | Syntax and language elements |
+
+Introduction (Why Django matters in 2025)
+Project 1: Job Board Platform
+Project 2: E-commerce Store with Payment Integration
+Project 3: SaaS Product (Subscription-based App)
+Project 4: Social Media Web App
+Project 5: Blog + CMS (Content Management System)
+Project 6: Real-time Chat Application
+Project 7: AI-Powered Web App with Django + ML Integration
+Conclusion: How to Present These Projects to Land a Job
+
+
+
+To refer later
+--------------
+The Python Standard Library. 
+The Python Tutorial.
+Extending and Embedding the Python Interpreter 
+Python/C API Reference Manual  
+https://betterstack.com/community/guides/scaling-python/python-errors/
+
+A List of - Confluence
+
+https://www.geeksforgeeks.org/angular-js/angularjs/ | Learning platform
+https://huggingface.co/ | AI Community
+https://docs.djangoproject.com/en/5.2/intro/tutorial01/
+Operations supported by Timedelta Class
+Integer literals
+Floating-point literals
+git py
+https://www.greatfrontend.com/
+https://python-course.eu/
+
+
+Hugging face
+Firebase
+Claude
+*** Model, Training, AI ****
+*** Alogirthms extract from Claude ***
+
+Where do you use Python?
+Do you remember Battlefield 2, Battlefield 2142 and Battlefield Heroes - strategy and first person shooter games from EA DICE? All the games use Python for logic and server controls. Python is frequently used for creating open-source, free games, e.g., OpenRTS, PySol, Metin 2, or Frets On Fire - famous Guitar Hero-like games written in pygame.
+
+And what about the major websites and services? Dropbox? UBER? Spotify? Pintrest? BuzzFeed? Yes. They were all written, to a greater or lesser extent, in Python. Other examples?
+
+Internet Applications (BitTorrent, Jogger Publishing Assistant, TheCircle, TwistedMatrix)
+3D CAD/CAM (FreeCAD, Fandango, Blender, Vintech RCAM)
+Enterprise Applications (Odoo, Tryton, Picalo, LinOTP 2, RESTx)
+Image Applications (Gnofract 4D, Gogh, imgSeek, MayaVi, VPython)
+Mobile Applications (Aarlogic C05/3, AppBackup, Pyroute)
+Office Applications (calibre, faces, Notalon, pyspread)
+Personal Information Managers (BitPim, Narval, Prioritise, Task Coach, WikidPad)
+(Source: https://wiki.python.org/moin/PythonProjects)
+
+
+Generally, Python is a great choice for:
+
+Web and Internet development (e.g., Django and Pyramid frameworks, Flask and Bottle micro-frameworks)
+Scientific and numeric computing (e.g., SciPy - a collection of packages for the purposes of mathematics, science, and engineering; Ipython - an interactive shell that features editing and recording of work sessions)
+Education (it's a brilliant language for teaching programming! And that's why we're offering this course to you!)
+Desktop GUIs (e.g., wxWidgets, Kivy, Qt)
+Software Development (build control, management, and testing - Scons, Buildbot, Apache Gump, Roundup, Trac)
+Business applications (ERP and e-commerce systems - Odoo, Tryton)
+(Source: https://www.python.org/about/apps)
+And many, many other projects and development tools.
+
+
+Python is a great choice for:
+
+Web and Internet development (e.g., Django and Pyramid frameworks, Flask and Bottle micro-frameworks)
+Scientific and numeric computing (e.g., SciPy - a collection of packages for the purposes of mathematics, science, and engineering; Ipython - an interactive shell that features editing and recording of work sessions)
+Education (it's a brilliant language for teaching programming! And that's why we're offering this course to you!)
+Desktop GUIs (e.g., wxWidgets, Kivy, Qt)
+Software Development (build control, management, and testing - Scons, Buildbot, Apache Gump, Roundup, Trac)
+Business applications (ERP and e-commerce systems - Odoo, Tryton)
+(Source: https://www.python.org/about/apps)
+ 
+
+Code Explainer
+---------------
+https://zzzcode.ai/python/code-explain
+
+Code Checker
+------------
+https://techbeamers.com/python-code-checker/
+
+Python Test
+-----------
+https://www.learnx.org/dashboard/python/2/10
+
+Several websites and browser extensions can help you identify the technologies used to build a website
+Websites	
+BuiltWith	https://builtwith.com/
+Ful.io	https://ful.io/
+	
+Browser extensions	
+BuiltWith:	https://builtwith.com/toolbar
+Wappalyzer:	https://www.wappalyzer.com
+WhatRuns:	https://www.whatruns.com
+Snov.io	https://snov.io/
+Webspotter:	https://webspotters.in
+
+ 
+Compiler : Advantages
+•	the execution of the translated code is usually faster;
+•	only the user has to have the compiler - the end-user may use the code without it;
+•	the translated code is stored using machine language - as it is very hard to understand it, 
+•	your own inventions and programming tricks are likely to remain your secret.
+
+Compiler : Dis-Advantages
+•	the compilation itself may be a very time-consuming process - you may not be able to run 
+	your code immediately after making an amendment;
+•	you have to have as many compilers as hardware platforms you want your code to be run on.
+
+Interpreter : Advantages
+•	you can run the code as soon as you complete it - there are no additional phases of translation;
+•	the code is stored using programming language, not machine language - this means that it can be run on 
+	computers using different machine languages; you don't compile your code separately for each different architecture.
+
+Interpreter : Dis-Advantages
+•	don't expect interpretation to ramp up your code to high speed - your code will share the computer's power with the interpreter, 
+	so it can't be really fast;
+•	both you and the end user have to have the interpreter to run your code.
