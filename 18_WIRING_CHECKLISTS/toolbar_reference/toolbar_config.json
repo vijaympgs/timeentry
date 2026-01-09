@@ -1,0 +1,35 @@
+{
+    "codes": {
+        "N": "New",
+        "E": "Edit",
+        "S": "Save",
+        "C": "Cancel",
+        "K": "Clear/Reset",
+        "V": "View Details",
+        "P": "Print Document",
+        "M": "Email Document",
+        "R": "Refresh Data",
+        "D": "Delete Record",
+        "X": "Exit Page",
+        "Q": "Search Focus",
+        "F": "Filter Toggle",
+        "I": "Import (Upload)",
+        "O": "Export (Download)",
+        "L": "Clone/Copy",
+        "B": "Internal Notes",
+        "U": "Attachments",
+        "G": "Config/Settings",
+        "?": "Help Context",
+        "T": "Submit Workflow",
+        "J": "Reject Workflow",
+        "H": "Hold/Suspend",
+        "Z": "Void/Annul",
+        "A": "Authorize/Approve",
+        "W": "Amend/Modify"
+    },
+    "standard_configs": {
+        "LIST_VIEW": "NRQFX",
+        "MASTER_DATA": "NESCKVDXQFBGU?",
+        "TRANSACTION": "NESCKPVDXRTJZAWBGU?"
+    }
+}
