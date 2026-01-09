@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toolbar Explorer - Olivine ERP</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .screen-item {
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .screen-item:hover {
+            background: #eff6ff;
+        }
+
+        .screen-item.selected {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .config-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .status-complete {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status-pending {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .mode-card.active {
+            border: 2px solid #3b82f6;
+            transform: scale(1.02);
+            box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3), 0 2px 4px -1px rgba(59, 130, 246, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 h-screen overflow-hidden">
+    <div class="flex h-full">
+        <!-- LEFT SIDEBAR: Retail Module Explorer -->
+        <div class="w-80 bg-white border-r border-gray-200 overflow-y-auto">
+            <div class="p-4 border-b border-gray-200 bg-gradient-to-r from-blue-600 to-indigo-600">
+                <h2 class="text-lg font-bold text-white">📦 Retail Module Explorer</h2>
+                <p class="text-xs text-blue-100 mt-1">Click a screen to view toolbar config</p>
+            </div>
+
+            <!-- Inventory -->
+            <div class="p-3">
+                <div class="flex items-center gap-2 mb-2">
+                    <i data-lucide="package" class="w-4 h-4 text-gray-600"></i>
+                    <h3 class="text-sm font-semibold text-gray-700">Inventory</h3>
+                </div>
+                <div class="space-y-1 ml-6">
+                    <div class="screen-item p-2 rounded text-sm"
+                        onclick="selectScreen('UOM Setup', 'NESCKVDXRQF', 'Master', 'complete', 'inventory_uom_setup', '/inventory/uoms')">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-900">UOM Setup</span>
+                            <span class="config-badge status-complete">✓</span>
+                        </div>
+                    </div>
+                    <div class="screen-item p-2 rounded text-sm"
+                        onclick="selectScreen('Item Master', 'NESCKVDXRQFIO', 'Masters (Advanced)', 'pending')">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-900">Item Master</span>
+                            <span class="config-badge status-pending">⏳</span>
+                        </div>
+                    </div>
+                    <div class="screen-item p-2 rounded text-sm"
+                        onclick="selectScreen('Stock Movement', 'NESCKVDXRQF', 'Transaction (Simple)', 'pending')">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-900">Stock Movement</span>
+                            <span class="config-badge status-pending">⏳</span>
+                        </div>
+                    </div>
+                    <div class="screen-item p-2 rounded text-sm"
+                        onclick="selectScreen('Stock Valuation', 'VRXPYQFG', 'Reports', 'pending')">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-900">Stock Valuation</span>
+                            <span class="config-badge status-pending">⏳</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Procurement -->
+            <div class="p-3 border-t">
+                <div class="flex items-center gap-2 mb-2">
+                    <i data-lucide="shopping-cart" class="w-4 h-4 text-gray-600"></i>
+                    <h3 class="text-sm font-semibold text-gray-700">Procurement</h3>
+                </div>
+                <div class="space-y-1 ml-6">
+                    <div class="screen-item p-2 rounded text-sm"
+                        onclick="selectScreen('Purchase Order', 'NESCKZTJAVPMRDX1234QF', 'Transaction', 'complete', 'PURCHASE_ORDERS', '/procurement/orders')">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-900">Purchase Order</span>
+                            <span class="config-badge status-complete">✓</span>
+                        </div>
+                    </div>
+                    <div class="screen-item p-2 rounded text-sm"
+                        onclick="selectScreen('Supplier Master', 'NESCKVDXRQFIO', 'Master', 'pending', 'SUPPLIER_MASTER', '/partners/suppliers')">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-900">Supplier Master</span>
+                            <span class="config-badge status-pending">⏳</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sales -->
+            <div class="p-3 border-t">
+                <div class="flex items-center gap-2 mb-2">
+                    <i data-lucide="trending-up" class="w-4 h-4 text-gray-600"></i>
+                    <h3 class="text-sm font-semibold text-gray-700">Sales</h3>
+                </div>
+                <div class="space-y-1 ml-6">
+                    <div class="screen-item p-2 rounded text-sm"
+                        onclick="selectScreen('Sales Order', 'NESCKZTJAVPMRDX1234QF', 'Transactions', 'pending')">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-900">Sales Order</span>
+                            <span class="config-badge status-pending">⏳</span>
+                        </div>
+                    </div>
+                    <div class="screen-item p-2 rounded text-sm"
+                        onclick="selectScreen('Customer Master', 'NESCKVDXRQFIO', 'Masters (Advanced)', 'pending')">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-900">Customer Master</span>
+                            <span class="config-badge status-pending">⏳</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Merchandising -->
+            <div class="p-3 border-t">
+                <div class="flex items-center gap-2 mb-2">
+                    <i data-lucide="tags" class="w-4 h-4 text-gray-600"></i>
+                    <h3 class="text-sm font-semibold text-gray-700">Merchandising</h3>
+                </div>
+                <div class="space-y-1 ml-6">
+                    <div class="screen-item p-2 rounded text-sm"
+                        onclick="selectScreen('Categories', 'NESCKVDXRQF', 'Masters (Simple)', 'complete')">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-900">Categories</span>
+                            <span class="config-badge status-complete">✓</span>
+                        </div>
+                    </div>
+                    <div class="screen-item p-2 rounded text-sm"
+                        onclick="selectScreen('Brands', 'NESCKVDXRQF', 'Masters (Simple)', 'complete')">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-900">Brands</span>
+                            <span class="config-badge status-complete">✓</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL: Toolbar Details -->
+        <div class="flex-1 overflow-y-auto p-6">
+            <div id="detailsPanel" class="hidden">
+                <!-- Header -->
+                <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex-1">
+                            <h1 class="text-3xl font-bold text-gray-900" id="screenName">Screen Name</h1>
+                            <div class="flex gap-4 mt-2">
+                                <div>
+                                    <p class="text-xs text-gray-500">Menu ID</p>
+                                    <code class="text-sm font-mono text-gray-700" id="menuId">---</code>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500">View Type</p>
+                                    <span class="text-sm font-semibold text-gray-700" id="viewType">---</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500">Route Path</p>
+                                    <code class="text-sm font-mono text-gray-600" id="routePath">---</code>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs text-gray-500 mb-1">Configuration String</p>
+                            <code class="text-3xl font-mono font-bold text-blue-600" id="configString">---</code>
+                        </div>
+                    </div>
+
+                    <!-- Django Admin Match Info -->
+                    <div class="border-t pt-4 mt-4">
+                        <p class="text-xs text-gray-500 mb-2">🔍 Django Admin Cross-Check:</p>
+                        <div class="bg-blue-50 p-3 rounded">
+                            <p class="text-xs text-gray-700">
+                                Search in Django: <code class="bg-white px-2 py-1 rounded" id="djangoSearch">---</code>
+                            </p>
+                            <p class="text-xs text-gray-700 mt-1">
+                                Expected Config: <code class="bg-white px-2 py-1 rounded font-bold"
+                                    id="expectedConfig">---</code>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Config Summary -->
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-500 cursor-pointer hover:shadow-md transition-all mode-card active"
+                        onclick="switchMode('ALL')" id="cardAll">
+                        <p class="text-xs text-gray-500 mb-1">Total Actions</p>
+                        <p class="text-2xl font-bold text-gray-900" id="totalActions">0</p>
+                        <p class="text-xs text-blue-600 font-medium mt-1">Click to view all</p>
+                        <code class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded mt-2 block font-mono"
+                            id="allModeString">---</code>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-green-500 cursor-pointer hover:shadow-md transition-all mode-card"
+                        onclick="switchMode('VIEW')" id="cardView">
+                        <p class="text-xs text-gray-500 mb-1">VIEW Mode</p>
+                        <p class="text-2xl font-bold text-gray-900" id="viewModeCount">0</p>
+                        <p class="text-xs text-green-600 font-medium mt-1">Click to view</p>
+                        <code class="text-xs bg-green-50 text-green-700 px-2 py-1 rounded mt-2 block font-mono"
+                            id="viewModeString">---</code>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-amber-500 cursor-pointer hover:shadow-md transition-all mode-card"
+                        onclick="switchMode('CREATE')" id="cardCreate">
+                        <p class="text-xs text-gray-500 mb-1">CREATE Mode</p>
+                        <p class="text-2xl font-bold text-gray-900" id="createModeCount">0</p>
+                        <p class="text-xs text-amber-600 font-medium mt-1">Click to view</p>
+                        <code class="text-xs bg-amber-50 text-amber-700 px-2 py-1 rounded mt-2 block font-mono"
+                            id="createModeString">---</code>
+                    </div>
+                </div>
+
+                <!-- Toolbar Preview -->
+                <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                    <h2 class="text-lg font-semibold text-gray-900 mb-4">🎨 Toolbar Preview (VIEW Mode)</h2>
+                    <div id="toolbarPreview"
+                        class="flex flex-wrap gap-2 p-4 bg-gray-50 rounded-lg border-2 border-gray-200">
+                        <!-- Buttons will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Character Breakdown -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h2 class="text-lg font-semibold text-gray-900 mb-4">🔤 Character Breakdown</h2>
+                    <div id="characterGrid" class="grid grid-cols-4 gap-3">
+                        <!-- Character cards will be inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="flex flex-col items-center justify-center h-full text-center">
+                <i data-lucide="mouse-pointer-click" class="w-16 h-16 text-gray-300 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-400 mb-2">Select a Screen</h3>
+                <p class="text-sm text-gray-500">Click any screen from the left sidebar to view its toolbar
+                    configuration</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ACTION_MAP = {
+            'N': { label: 'New', shortcut: 'F2', icon: 'plus', color: 'blue' },
+            'E': { label: 'Edit', shortcut: 'F3', icon: 'edit', color: 'blue' },
+            'S': { label: 'Save', shortcut: 'F8', icon: 'save', color: 'green' },
+            'C': { label: 'Cancel', shortcut: 'Esc', icon: 'x', color: 'gray' },
+            'K': { label: 'Clear', shortcut: 'F5', icon: 'rotate-ccw', color: 'amber' },
+            'V': { label: 'View', shortcut: 'F7', icon: 'eye', color: 'indigo' },
+            'D': { label: 'Delete', shortcut: 'F4', icon: 'trash-2', color: 'red' },
+            'X': { label: 'Exit', shortcut: 'Esc', icon: 'log-out', color: 'gray' },
+            'R': { label: 'Refresh', shortcut: 'F9', icon: 'refresh-cw', color: 'cyan' },
+            'Q': { label: 'Search', shortcut: 'Ctrl+F', icon: 'search', color: 'gray' },
+            'F': { label: 'Filter', shortcut: 'Alt+F', icon: 'filter', color: 'gray' },
+            'I': { label: 'Import', shortcut: 'Ctrl+I', icon: 'upload', color: 'violet' },
+            'O': { label: 'Export', shortcut: 'Ctrl+E', icon: 'download', color: 'indigo' },
+            'Y': { label: 'Export', shortcut: 'Ctrl+E', icon: 'download', color: 'indigo' },
+            'Z': { label: 'Authorize', shortcut: 'F10', icon: 'check-circle', color: 'green' },
+            'T': { label: 'Submit', shortcut: 'Alt+S', icon: 'send', color: 'blue' },
+            'J': { label: 'Reject', shortcut: 'Alt+R', icon: 'ban', color: 'red' },
+            'A': { label: 'Amend', shortcut: 'Alt+A', icon: 'file-edit', color: 'orange' },
+            'H': { label: 'Hold', shortcut: 'Alt+H', icon: 'pause-circle', color: 'yellow' },
+            'W': { label: 'Void', shortcut: 'Alt+V', icon: 'octagon', color: 'red' },
+            'P': { label: 'Print', shortcut: 'Ctrl+P', icon: 'printer', color: 'purple' },
+            'M': { label: 'Email', shortcut: 'Ctrl+M', icon: 'mail', color: 'sky' },
+            'L': { label: 'Clone', shortcut: 'Ctrl+Shift+C', icon: 'copy', color: 'blue' },
+            '1': { label: 'First', shortcut: 'Home', icon: 'chevron-first', color: 'gray' },
+            '2': { label: 'Prev', shortcut: 'PgUp', icon: 'chevron-left', color: 'gray' },
+            '3': { label: 'Next', shortcut: 'PgDn', icon: 'chevron-right', color: 'gray' },
+            '4': { label: 'Last', shortcut: 'End', icon: 'chevron-last', color: 'gray' },
+            'B': { label: 'Notes', shortcut: 'Alt+N', icon: 'sticky-note', color: 'yellow' },
+            'G': { label: 'Attach', shortcut: 'Alt+U', icon: 'paperclip', color: 'gray' },
+            '?': { label: 'Help', shortcut: 'F1', icon: 'help-circle', color: 'blue' }
+        };
+
+        const VIEW_MODE = 'NEVZPM1234RDQIYQFBGW?XTJAHL';
+        const CREATE_MODE = 'SCKX?BG';
+
+        let currentConfig = '';
+        let currentMode = 'ALL';
+
+        function switchMode(mode) {
+            currentMode = mode;
+
+            // Update active state
+            document.querySelectorAll('.mode-card').forEach(card => card.classList.remove('active'));
+            document.getElementById(`card${mode === 'ALL' ? 'All' : mode === 'VIEW' ? 'View' : 'Create'}`).classList.add('active');
+
+            // Update toolbar preview
+            updateToolbarPreview();
+
+            // Update title
+            const titles = {
+                'ALL': '🎨 Toolbar Preview (All Actions)',
+                'VIEW': '🎨 Toolbar Preview (VIEW Mode)',
+                'CREATE': '🎨 Toolbar Preview (CREATE Mode)'
+            };
+            document.querySelector('#toolbarPreview').previousElementSibling.textContent = titles[mode];
+        }
+
+        function updateToolbarPreview() {
+            const toolbarPreview = document.getElementById('toolbarPreview');
+            toolbarPreview.innerHTML = '';
+
+            if (!currentConfig) return;
+
+            const chars = currentConfig.split('');
+
+            chars.forEach(char => {
+                const action = ACTION_MAP[char];
+                if (!action) return;
+
+                // Filter based on mode
+                let shouldShow = false;
+                if (currentMode === 'ALL') {
+                    shouldShow = true;
+                } else if (currentMode === 'VIEW') {
+                    shouldShow = VIEW_MODE.includes(char);
+                } else if (currentMode === 'CREATE') {
+                    shouldShow = CREATE_MODE.includes(char);
+                }
+
+                if (shouldShow) {
+                    const btn = document.createElement('button');
+                    btn.className = `flex items-center gap-2 px-3 py-2 rounded-lg bg-white border-2 border-${action.color}-200 hover:border-${action.color}-400 transition-all shadow-sm`;
+                    btn.innerHTML = `
+                        <i data-lucide="${action.icon}" class="w-4 h-4 text-${action.color}-600"></i>
+                        <span class="text-xs font-medium text-gray-700">${action.label}</span>
+                        <span class="text-xs text-gray-400">${action.shortcut}</span>
+                    `;
+                    toolbarPreview.appendChild(btn);
+                }
+            });
+
+            lucide.createIcons();
+        }
+
+        function selectScreen(name, config, type, status, menuId = '---', routePath = '---') {
+            // Update selection
+            document.querySelectorAll('.screen-item').forEach(item => item.classList.remove('selected'));
+            event.currentTarget.classList.add('selected');
+
+            // Show details panel
+            document.getElementById('emptyState').classList.add('hidden');
+            document.getElementById('detailsPanel').classList.remove('hidden');
+
+            // Update header
+            document.getElementById('screenName').textContent = name;
+            document.getElementById('menuId').textContent = menuId;
+            document.getElementById('viewType').textContent = type;
+            document.getElementById('routePath').textContent = routePath;
+            document.getElementById('configString').textContent = config;
+
+            // Update Django cross-check info
+            document.getElementById('djangoSearch').textContent = menuId;
+            document.getElementById('expectedConfig').textContent = config;
+
+            // Store config globally
+            currentConfig = config;
+            currentMode = 'ALL'; // Reset to ALL mode when selecting new screen
+
+            // Calculate counts
+            const totalActions = config.length;
+            const viewModeChars = config.split('').filter(c => VIEW_MODE.includes(c));
+            const createModeChars = config.split('').filter(c => CREATE_MODE.includes(c));
+
+            const viewModeActions = viewModeChars.length;
+            const createModeActions = createModeChars.length;
+
+            document.getElementById('totalActions').textContent = totalActions;
+            document.getElementById('viewModeCount').textContent = viewModeActions;
+            document.getElementById('createModeCount').textContent = createModeActions;
+
+            // Update config strings for each mode
+            document.getElementById('allModeString').textContent = config;
+            document.getElementById('viewModeString').textContent = viewModeChars.join('');
+            document.getElementById('createModeString').textContent = createModeChars.join('');
+
+            // Reset active card
+            document.querySelectorAll('.mode-card').forEach(card => card.classList.remove('active'));
+            document.getElementById('cardAll').classList.add('active');
+
+            // Update toolbar preview
+            updateToolbarPreview();
+
+            // Generate character breakdown
+            const grid = document.getElementById('characterGrid');
+            grid.innerHTML = '';
+
+            config.split('').forEach(char => {
+                const action = ACTION_MAP[char];
+                if (action) {
+                    const card = document.createElement('div');
+                    card.className = 'bg-gray-50 rounded-lg p-3 border border-gray-200 hover:border-blue-300 transition-all';
+                    card.innerHTML = `
+                        <div class="flex items-center gap-2 mb-2">
+                            <code class="text-xl font-bold text-blue-600">${char}</code>
+                            <i data-lucide="${action.icon}" class="w-4 h-4 text-gray-600"></i>
+                        </div>
+                        <p class="text-xs font-semibold text-gray-900">${action.label}</p>
+                        <p class="text-xs text-gray-500">${action.shortcut}</p>
+                    `;
+                    grid.appendChild(card);
+                }
+            });
+
+            lucide.createIcons();
+        }
+
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
