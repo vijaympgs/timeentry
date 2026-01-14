@@ -1,0 +1,30 @@
+[
+  {
+    "model": "hrm.offerlettertemplate",
+    "fields": {
+      "company": "550e8400-e29b-41d4-a716-446655440001",
+      "template_name": "Standard Employment Offer",
+      "template_code": "STD_OFFER",
+      "template_type": "standard",
+      "template_content": "Dear {{candidate_name}},\\n\\nWe are pleased to offer you the position of {{position_title}}...",
+      "is_active": true,
+      "is_default": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "hrm.offerlettertemplate",
+    "fields": {
+      "company": "550e8400-e29b-41d4-a716-446655440001",
+      "template_name": "Internship Offer",
+      "template_code": "INTERN_OFFER",
+      "template_type": "internship",
+      "template_content": "Dear {{candidate_name}},\\n\\nWe are pleased to offer you an internship position...",
+      "is_active": true,
+      "is_default": false,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  }
+]

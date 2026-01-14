@@ -1,0 +1,117 @@
+[
+  {
+    "model": "hrm.organizationalunit",
+    "pk": "550e8400-e29b-41d4-a716-446655440001",
+    "fields": {
+      "company": "550e8400-e29b-41d4-a716-446655440000",
+      "parent_unit": null,
+      "manager": null,
+      "budget_owner": null,
+      "name": "TechCorp International",
+      "code": "HQ",
+      "unit_type": "company",
+      "description": "Main corporate headquarters",
+      "level": 0,
+      "sort_order": 1,
+      "is_active": true,
+      "effective_date": "2024-01-01",
+      "phone": "+1-555-0100",
+      "email": "info@techcorp.com",
+      "cost_center_code": "CC-001",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "hrm.organizationalunit",
+    "pk": "550e8400-e29b-41d4-a716-446655440002",
+    "fields": {
+      "company": "550e8400-e29b-41d4-a716-446655440000",
+      "parent_unit": "550e8400-e29b-41d4-a716-446655440001",
+      "manager": null,
+      "budget_owner": null,
+      "name": "Engineering Division",
+      "code": "ENG",
+      "unit_type": "division",
+      "description": "Software development and engineering",
+      "level": 1,
+      "sort_order": 1,
+      "is_active": true,
+      "effective_date": "2024-01-01",
+      "phone": "+1-555-0101",
+      "email": "engineering@techcorp.com",
+      "cost_center_code": "CC-101",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "hrm.organizationalunit",
+    "pk": "550e8400-e29b-41d4-a716-446655440003",
+    "fields": {
+      "company": "550e8400-e29b-41d4-a716-446655440000",
+      "parent_unit": "550e8400-e29b-41d4-a716-446655440001",
+      "manager": null,
+      "budget_owner": null,
+      "name": "Sales Division",
+      "code": "SALES",
+      "unit_type": "division",
+      "description": "Sales and business development",
+      "level": 1,
+      "sort_order": 2,
+      "is_active": true,
+      "effective_date": "2024-01-01",
+      "phone": "+1-555-0102",
+      "email": "sales@techcorp.com",
+      "cost_center_code": "CC-102",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "hrm.organizationalunit",
+    "pk": "550e8400-e29b-41d4-a716-446655440004",
+    "fields": {
+      "company": "550e8400-e29b-41d4-a716-446655440000",
+      "parent_unit": "550e8400-e29b-41d4-a716-446655440002",
+      "manager": null,
+      "budget_owner": null,
+      "name": "Frontend Development",
+      "code": "FE",
+      "unit_type": "department",
+      "description": "Frontend web and mobile development",
+      "level": 2,
+      "sort_order": 1,
+      "is_active": true,
+      "effective_date": "2024-01-01",
+      "phone": "+1-555-0103",
+      "email": "frontend@techcorp.com",
+      "cost_center_code": "CC-101-01",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "hrm.organizationalunit",
+    "pk": "550e8400-e29b-41d4-a716-446655440005",
+    "fields": {
+      "company": "550e8400-e29b-41d4-a716-446655440000",
+      "parent_unit": "550e8400-e29b-41d4-a716-446655440002",
+      "manager": null,
+      "budget_owner": null,
+      "name": "Backend Development",
+      "code": "BE",
+      "unit_type": "department",
+      "description": "Backend services and API development",
+      "level": 2,
+      "sort_order": 2,
+      "is_active": true,
+      "effective_date": "2024-01-01",
+      "phone": "+1-555-0104",
+      "email": "backend@techcorp.com",
+      "cost_center_code": "CC-101-02",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  }
+]

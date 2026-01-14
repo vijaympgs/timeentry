@@ -1,0 +1,416 @@
+/* HRM Employee Form - Centralized CSS Configuration */
+/* Workspace C Constraints and Field Width Standardization */
+
+:root {
+  /* Workspace C Constraints - Maximum container dimensions */
+  --workspace-c-max-width: 1200px;
+  --workspace-c-max-height: 80vh;
+  --workspace-c-content-padding: 24px;
+  
+  /* Standard Field Widths - Based on content type */
+  --field-width-employee-number: 120px;
+  --field-width-ssn: 140px;
+  --field-width-national-id: 180px;
+  --field-width-passport-number: 160px;
+  --field-width-standard: 200px;
+  --field-width-wide: 280px;
+  --field-width-full: 100%;
+  
+  /* Form Layout Spacing */
+  --form-section-gap: 24px;
+  --form-row-gap: 16px;
+  --form-field-gap: 12px;
+  --toolbar-height: 60px;
+  --toolbar-margin-bottom: 16px;
+  
+  /* Tab Container Constraints */
+  --tab-container-max-height: calc(var(--workspace-c-max-height) - var(--toolbar-height) - 120px);
+  --tab-content-padding: 24px;
+  --tab-nav-height: 48px;
+  
+  /* Responsive Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
+
+/* Employee Form Container - Workspace C Compliance */
+.employee-form-container {
+  max-width: var(--workspace-c-max-width);
+  max-height: var(--workspace-c-max-height);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Toolbar Section - Proper Margin Alignment */
+.employee-form-toolbar {
+  height: var(--toolbar-height);
+  margin-bottom: var(--toolbar-margin-bottom);
+  padding: 0 var(--workspace-c-content-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fafafa;
+  flex-shrink: 0;
+}
+
+/* Tab Navigation - Fixed Height to Prevent Overflow */
+.employee-form-tab-nav {
+  height: var(--tab-nav-height);
+  flex-shrink: 0;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fafafa;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.employee-form-tab-nav::-webkit-scrollbar {
+  height: 4px;
+}
+
+.employee-form-tab-nav::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.employee-form-tab-nav::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 2px;
+}
+
+/* Tab Content - Constrained Height with Scroll */
+.employee-form-tab-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: var(--tab-container-max-height);
+  padding: var(--tab-content-padding);
+}
+
+.employee-form-tab-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.employee-form-tab-content::-webkit-scrollbar-track {
+  background: #f9fafb;
+}
+
+.employee-form-tab-content::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 3px;
+}
+
+.employee-form-tab-content::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db;
+}
+
+/* Form Sections - Consistent Spacing */
+.employee-form-section {
+  margin-bottom: var(--form-section-gap);
+}
+
+.employee-form-section:last-child {
+  margin-bottom: 0;
+}
+
+.employee-form-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.employee-form-section-description {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+/* Standardized Field Widths */
+.field-employee-number {
+  width: var(--field-width-employee-number);
+  min-width: var(--field-width-employee-number);
+}
+
+.field-ssn {
+  width: var(--field-width-ssn);
+  min-width: var(--field-width-ssn);
+}
+
+.field-national-id {
+  width: var(--field-width-national-id);
+  min-width: var(--field-width-national-id);
+}
+
+.field-passport-number {
+  width: var(--field-width-passport-number);
+  min-width: var(--field-width-passport-number);
+}
+
+.field-standard {
+  width: var(--field-width-standard);
+  min-width: var(--field-width-standard);
+}
+
+.field-wide {
+  width: var(--field-width-wide);
+  min-width: var(--field-width-wide);
+}
+
+.field-full {
+  width: var(--field-width-full);
+}
+
+/* Form Layout Grids - Responsive and Constrained */
+.form-grid-identification {
+  display: grid;
+  grid-template-columns: 
+    var(--field-width-employee-number) 
+    var(--field-width-ssn) 
+    var(--field-width-national-id) 
+    var(--field-width-passport-number);
+  gap: var(--form-field-gap);
+  align-items: end;
+}
+
+.form-grid-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--form-row-gap);
+}
+
+.form-grid-three-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--form-row-gap);
+}
+
+.form-grid-mixed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--field-width-standard), 1fr));
+  gap: var(--form-row-gap);
+}
+
+/* Form Field Groups - Proper Alignment */
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-field-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form-field-input {
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-field-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-field-input.error {
+  border-color: #ef4444;
+}
+
+.form-field-error {
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: 2px;
+}
+
+/* Checkbox and Radio Groups */
+.form-checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.form-checkbox-input {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+
+.form-checkbox-label {
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+}
+
+/* Responsive Design - Workspace Constraints */
+@media (max-width: 1200px) {
+  .employee-form-container {
+    max-width: 100%;
+    margin: 0 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --workspace-c-content-padding: 16px;
+    --tab-content-padding: 16px;
+    --form-section-gap: 20px;
+    --form-row-gap: 12px;
+  }
+  
+  .form-grid-identification {
+    grid-template-columns: 1fr;
+    gap: var(--form-row-gap);
+  }
+  
+  .form-grid-two-column,
+  .form-grid-three-column {
+    grid-template-columns: 1fr;
+  }
+  
+  .field-employee-number,
+  .field-ssn,
+  .field-national-id,
+  .field-passport-number,
+  .field-standard,
+  .field-wide {
+    width: var(--field-width-full);
+    min-width: unset;
+  }
+}
+
+@media (max-width: 640px) {
+  .employee-form-toolbar {
+    padding: 0 12px;
+  }
+  
+  .employee-form-tab-content {
+    padding: 12px;
+  }
+  
+  .form-field-input {
+    height: 36px;
+    padding: 6px 10px;
+  }
+}
+
+/* Benefits Tab Specific Fixes - Prevent Overflow */
+.benefits-tab-container {
+  max-height: var(--tab-container-max-height);
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.benefits-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--form-row-gap);
+}
+
+.benefits-checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Print Styles - Ensure Proper Layout */
+@media print {
+  .employee-form-container {
+    max-height: none;
+    overflow: visible;
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+  
+  .employee-form-tab-content {
+    max-height: none;
+    overflow: visible;
+  }
+  
+  .employee-form-toolbar,
+  .employee-form-tab-nav {
+    display: none;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .form-field-input {
+    border-width: 2px;
+  }
+  
+  .form-field-input:focus {
+    border-width: 3px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .form-field-input {
+    transition: none;
+  }
+  
+  .employee-form-tab-content::-webkit-scrollbar-thumb {
+    transition: none;
+  }
+}
+
+/* Focus Visible Support */
+.form-field-input:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Loading States */
+.form-field-input.loading {
+  background-color: #f9fafb;
+  opacity: 0.7;
+  cursor: wait;
+}
+
+/* Disabled States */
+.form-field-input:disabled {
+  background-color: #f3f4f6;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+/* Error States */
+.form-field-group.error .form-field-input {
+  border-color: #ef4444;
+}
+
+.form-field-group.error .form-field-label {
+  color: #ef4444;
+}
+
+/* Success States */
+.form-field-group.success .form-field-input {
+  border-color: #10b981;
+}
+
+/* Warning States */
+.form-field-group.warning .form-field-input {
+  border-color: #f59e0b;
+}

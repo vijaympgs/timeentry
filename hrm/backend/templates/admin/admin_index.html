@@ -1,0 +1,72 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block extrastyle %}
+{{ block.super }}
+<style>
+    .admin-index {
+        /* Remove centering to align with Django admin header */
+        max-width: none;
+        margin: 0;
+        padding-top: 0;       /* eliminate white space above first item */
+        padding-bottom: 2rem;
+    }
+    
+    
+    .admin-sites-list {
+        list-style: none;
+        padding: 0 0 0 20px; /* left padding to align with Django admin header */
+        margin: 0;
+    }
+    
+    .admin-site-item {
+        margin-bottom: 0.5rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .admin-site-item:last-child {
+        border-bottom: none;
+    }
+    
+    .admin-site-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+    
+    .admin-site-link:hover .admin-site-name {
+        color: #0078d4;
+    }
+    
+    .admin-site-name {
+        font-size: 20px;
+        font-weight: 600;
+        color: #201f1e;
+        margin-bottom: 0.5rem;
+    }
+    
+    .admin-site-description {
+        font-size: 14px;
+        color: #605e5c;
+        line-height: 1.4;
+    }
+</style>
+{% endblock %}
+
+{% block bodyclass %}{{ block.super }} admin-index{% endblock %}
+
+{% block content %}
+<div class="admin-index">
+    <ul class="admin-sites-list">
+        {% for site in admin_sites %}
+        <li class="admin-site-item">
+            <a href="{{ site.url }}" class="admin-site-link">
+                <div class="admin-site-name">{{ site.name }}</div>
+                <div class="admin-site-description">{{ site.description }}</div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

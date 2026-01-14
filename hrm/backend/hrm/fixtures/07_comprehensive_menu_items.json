@@ -1,0 +1,751 @@
+[
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 10,
+    "fields": {
+      "menu_id": "EMPLOYEE_MASTER",
+      "menu_name": "Employee Master",
+      "app": "HRM",
+      "submodule": "EMPLOYEE",
+      "module": "HRM",
+      "menu_type": "MASTER",
+      "route_path": "/hrm/employees",
+      "toolbar_config": "NESCKVDXRQFIO",
+      "applicable_toolbar_config": "NESCKVDXRQFIO",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 11,
+    "fields": {
+      "menu_id": "HRM_EMPLOYEE_ADDRESSES",
+      "menu_name": "Employee Addresses",
+      "app": "HRM",
+      "submodule": "Employee Management",
+      "module": "HRM",
+      "menu_type": "M",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 11,
+    "fields": {
+      "menu_id": "HRM_EMPLOYEE_PROFILES",
+      "menu_name": "Employee Profiles",
+      "app": "HRM",
+      "submodule": "Employee Management",
+      "module": "HRM",
+      "menu_type": "M",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 12,
+    "fields": {
+      "menu_id": "HRM_EMPLOYEE_SKILLS",
+      "menu_name": "Employee Skills",
+      "app": "HRM",
+      "submodule": "Employee Management",
+      "module": "HRM",
+      "menu_type": "M",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 13,
+    "fields": {
+      "menu_id": "HRM_EMPLOYEE_DOCUMENTS",
+      "menu_name": "Employee Documents",
+      "app": "HRM",
+      "submodule": "Employee Management",
+      "module": "HRM",
+      "menu_type": "M",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 14,
+    "fields": {
+      "menu_id": "HRM_SKILL_CATEGORIES",
+      "menu_name": "Skill Categories",
+      "app": "HRM",
+      "submodule": "Employee Management",
+      "module": "HRM",
+      "menu_type": "C",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 15,
+    "fields": {
+      "menu_id": "ORG_DEPARTMENTS",
+      "menu_name": "Departments",
+      "app": "HRM",
+      "submodule": "Organization Management",
+      "module": "HRM",
+      "menu_type": "M",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 16,
+    "fields": {
+      "menu_id": "ORG_ORGANIZATIONAL_UNITS",
+      "menu_name": "Organizational Units",
+      "app": "HRM",
+      "submodule": "Organization Management",
+      "module": "HRM",
+      "menu_type": "M",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 17,
+    "fields": {
+      "menu_id": "ORG_POSITIONS",
+      "menu_name": "Positions",
+      "app": "HRM",
+      "submodule": "Organization Management",
+      "module": "HRM",
+      "menu_type": "M",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 18,
+    "fields": {
+      "menu_id": "ORG_COMPANIES",
+      "menu_name": "Companies",
+      "app": "HRM",
+      "submodule": "Organization Management",
+      "module": "HRM",
+      "menu_type": "M",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 19,
+    "fields": {
+      "menu_id": "PERF_RATING_SCALES",
+      "menu_name": "Rating Scales",
+      "app": "HRM",
+      "submodule": "Performance Management",
+      "module": "HRM",
+      "menu_type": "C",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 20,
+    "fields": {
+      "menu_id": "PERF_REVIEW_CYCLES",
+      "menu_name": "Review Cycles",
+      "app": "HRM",
+      "submodule": "Performance Management",
+      "module": "HRM",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 21,
+    "fields": {
+      "menu_id": "PERF_CALIBRATION_SESSIONS",
+      "menu_name": "Calibration Sessions",
+      "app": "HRM",
+      "submodule": "Performance Management",
+      "module": "HRM",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 22,
+    "fields": {
+      "menu_id": "LEARN_COURSES",
+      "menu_name": "Courses",
+      "app": "HRM",
+      "submodule": "Learning & Development",
+      "module": "HRM",
+      "menu_type": "M",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 23,
+    "fields": {
+      "menu_id": "LEARN_TRAINING_SESSIONS",
+      "menu_name": "Training Sessions",
+      "app": "HRM",
+      "submodule": "Learning & Development",
+      "module": "HRM",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 24,
+    "fields": {
+      "menu_id": "LEARN_INSTRUCTORS",
+      "menu_name": "Instructors",
+      "app": "HRM",
+      "submodule": "Learning & Development",
+      "module": "HRM",
+      "menu_type": "M",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 25,
+    "fields": {
+      "menu_id": "LEARN_LEARNING_PATHS",
+      "menu_name": "Learning Paths",
+      "app": "HRM",
+      "submodule": "Learning & Development",
+      "module": "HRM",
+      "menu_type": "C",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 26,
+    "fields": {
+      "menu_id": "COMP_SALARY_STRUCTURES",
+      "menu_name": "Salary Structures",
+      "app": "HRM",
+      "submodule": "Compensation & Payroll",
+      "module": "HRM",
+      "menu_type": "C",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 27,
+    "fields": {
+      "menu_id": "COMP_PAY_GRADES",
+      "menu_name": "Pay Grades",
+      "app": "HRM",
+      "submodule": "Compensation & Payroll",
+      "module": "HRM",
+      "menu_type": "C",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 28,
+    "fields": {
+      "menu_id": "COMP_PAYROLL_RUNS",
+      "menu_name": "Payroll Runs",
+      "app": "HRM",
+      "submodule": "Compensation & Payroll",
+      "module": "HRM",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 29,
+    "fields": {
+      "menu_id": "RECR_JOB_POSTINGS",
+      "menu_name": "Job Postings",
+      "app": "HRM",
+      "submodule": "Recruitment & Screening",
+      "module": "HRM",
+      "menu_type": "M",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 30,
+    "fields": {
+      "menu_id": "RECR_JOB_APPLICATIONS",
+      "menu_name": "Job Applications",
+      "app": "HRM",
+      "submodule": "Recruitment & Screening",
+      "module": "HRM",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 31,
+    "fields": {
+      "menu_id": "RECR_SCREENING_PROCESSES",
+      "menu_name": "Screening Processes",
+      "app": "HRM",
+      "submodule": "Recruitment & Screening",
+      "module": "HRM",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 32,
+    "fields": {
+      "menu_id": "TIME_TIME_ENTRIES",
+      "menu_name": "Time Entries",
+      "app": "HRM",
+      "submodule": "Time & Attendance",
+      "module": "HRM",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 33,
+    "fields": {
+      "menu_id": "TIME_SHIFTS",
+      "menu_name": "Shifts",
+      "app": "HRM",
+      "submodule": "Time & Attendance",
+      "module": "HRM",
+      "menu_type": "C",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 34,
+    "fields": {
+      "menu_id": "TIME_ATTENDANCE_POLICIES",
+      "menu_name": "Attendance Policies",
+      "app": "HRM",
+      "submodule": "Time & Attendance",
+      "module": "HRM",
+      "menu_type": "C",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 35,
+    "fields": {
+      "menu_id": "TIME_TIMESHEETS",
+      "menu_name": "Timesheets",
+      "app": "HRM",
+      "submodule": "Time & Attendance",
+      "module": "HRM",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 36,
+    "fields": {
+      "menu_id": "BADGE_BADGES",
+      "menu_name": "Badges",
+      "app": "HRM",
+      "submodule": "Badges & Recognition",
+      "module": "HRM",
+      "menu_type": "M",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 37,
+    "fields": {
+      "menu_id": "BADGE_AWARDS",
+      "menu_name": "Badge Awards",
+      "app": "HRM",
+      "submodule": "Badges & Recognition",
+      "module": "HRM",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 38,
+    "fields": {
+      "menu_id": "BADGE_NOMINATIONS",
+      "menu_name": "Badge Nominations",
+      "app": "HRM",
+      "submodule": "Badges & Recognition",
+      "module": "HRM",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 39,
+    "fields": {
+      "menu_id": "TAX_CALCULATIONS",
+      "menu_name": "Tax Calculations",
+      "app": "HRM",
+      "submodule": "Tax & Compliance",
+      "module": "HRM",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 40,
+    "fields": {
+      "menu_id": "TAX_JURISDICTIONS",
+      "menu_name": "Tax Jurisdictions",
+      "app": "HRM",
+      "submodule": "Tax & Compliance",
+      "module": "HRM",
+      "menu_type": "C",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 41,
+    "fields": {
+      "menu_id": "TAX_WITHHOLDINGS",
+      "menu_name": "Tax Withholdings",
+      "app": "HRM",
+      "submodule": "Tax & Compliance",
+      "module": "HRM",
+      "menu_type": "C",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 42,
+    "fields": {
+      "menu_id": "FMS_ACCOUNT_CHARTS",
+      "menu_name": "Account Charts",
+      "app": "FMS",
+      "submodule": "Financial Management",
+      "module": "FMS",
+      "menu_type": "M",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 43,
+    "fields": {
+      "menu_id": "FMS_FINANCIAL_STATEMENTS",
+      "menu_name": "Financial Statements",
+      "app": "FMS",
+      "submodule": "Financial Management",
+      "module": "FMS",
+      "menu_type": "R",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 44,
+    "fields": {
+      "menu_id": "FMS_BUDGETS",
+      "menu_name": "Budgets",
+      "app": "FMS",
+      "submodule": "Financial Management",
+      "module": "FMS",
+      "menu_type": "C",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 45,
+    "fields": {
+      "menu_id": "FMS_EXPENSE_REPORTS",
+      "menu_name": "Expense Reports",
+      "app": "FMS",
+      "submodule": "Financial Management",
+      "module": "FMS",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 46,
+    "fields": {
+      "menu_id": "FMS_INVOICES",
+      "menu_name": "Invoices",
+      "app": "FMS",
+      "submodule": "Financial Management",
+      "module": "FMS",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 47,
+    "fields": {
+      "menu_id": "FMS_PAYMENTS",
+      "menu_name": "Payments",
+      "app": "FMS",
+      "submodule": "Financial Management",
+      "module": "FMS",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 48,
+    "fields": {
+      "menu_id": "CRM_CUSTOMERS",
+      "menu_name": "Customers",
+      "app": "CRM",
+      "submodule": "Customer Management",
+      "module": "CRM",
+      "menu_type": "M",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 49,
+    "fields": {
+      "menu_id": "CRM_CONTACTS",
+      "menu_name": "Contacts",
+      "app": "CRM",
+      "submodule": "Customer Management",
+      "module": "CRM",
+      "menu_type": "M",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 50,
+    "fields": {
+      "menu_id": "CRM_LEADS",
+      "menu_name": "Leads",
+      "app": "CRM",
+      "submodule": "Sales Management",
+      "module": "CRM",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 51,
+    "fields": {
+      "menu_id": "CRM_OPPORTUNITIES",
+      "menu_name": "Opportunities",
+      "app": "CRM",
+      "submodule": "Sales Management",
+      "module": "CRM",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 52,
+    "fields": {
+      "menu_id": "CRM_CAMPAIGNS",
+      "menu_name": "Campaigns",
+      "app": "CRM",
+      "submodule": "Marketing Management",
+      "module": "CRM",
+      "menu_type": "T",
+      "toolbar_config": "NRQFXVDIOLBUG",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  }
+]

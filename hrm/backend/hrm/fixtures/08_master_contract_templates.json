@@ -1,0 +1,30 @@
+[
+  {
+    "model": "hrm.contracttemplate",
+    "fields": {
+      "company": "550e8400-e29b-41d4-a716-446655440001",
+      "template_name": "Permanent Employment Contract",
+      "template_code": "PERM_CONTRACT",
+      "contract_type": "permanent",
+      "template_content": "EMPLOYMENT CONTRACT\\n\\nThis Employment Agreement is made between...",
+      "is_active": true,
+      "is_default": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "hrm.contracttemplate",
+    "fields": {
+      "company": "550e8400-e29b-41d4-a716-446655440001",
+      "template_name": "Fixed Term Contract",
+      "template_code": "FIXED_CONTRACT",
+      "contract_type": "fixed_term",
+      "template_content": "FIXED TERM EMPLOYMENT CONTRACT\\n\\nThis Fixed Term Employment Agreement...",
+      "is_active": true,
+      "is_default": false,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  }
+]

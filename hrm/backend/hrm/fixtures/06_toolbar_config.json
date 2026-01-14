@@ -1,0 +1,255 @@
+[
+  {
+    "model": "hrm.erptoolbarcontrol",
+    "pk": 1,
+    "fields": {
+      "module_name": "HRM",
+      "master_toolbar_string": "NESCKVPMRDXQF IOLBUGTJ HZAW?"
+    }
+  },
+  {
+    "model": "hrm.erptoolbarcontrol",
+    "pk": 2,
+    "fields": {
+      "module_name": "FMS",
+      "master_toolbar_string": "NESCKVPMRDXQF IOLBUGTJ HZAW?"
+    }
+  },
+  {
+    "model": "hrm.erptoolbarcontrol",
+    "pk": 3,
+    "fields": {
+      "module_name": "CRM",
+      "master_toolbar_string": "NESCKVPMRDXQF IOLBUGTJ HZAW?"
+    }
+  },
+  {
+    "model": "hrm.role",
+    "pk": 1,
+    "fields": {
+      "name": "Administrator",
+      "description": "System administrator with full access to all features",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.role",
+    "pk": 2,
+    "fields": {
+      "name": "HR Manager",
+      "description": "HR manager with access to employee management features",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.role",
+    "pk": 3,
+    "fields": {
+      "name": "Employee",
+      "description": "Regular employee with limited access to self-service features",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.role",
+    "pk": 4,
+    "fields": {
+      "name": "Manager",
+      "description": "Department manager with access to team management features",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 1,
+    "fields": {
+      "menu_id": "HRM_EMPLOYEE_MASTER",
+      "menu_name": "Employee Records",
+      "module": "HRM",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 2,
+    "fields": {
+      "menu_id": "HRM_ORGANIZATIONAL_CHART",
+      "menu_name": "Organizational Chart",
+      "module": "HRM",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 3,
+    "fields": {
+      "menu_id": "HRM_EMPLOYEE_DIRECTORY",
+      "menu_name": "Employee Directory",
+      "module": "HRM",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 4,
+    "fields": {
+      "menu_id": "HRM_DEPARTMENT_MASTER",
+      "menu_name": "Department Management",
+      "module": "HRM",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 5,
+    "fields": {
+      "menu_id": "HRM_SALARY_STRUCTURES",
+      "menu_name": "Salary Structures",
+      "module": "HRM",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 6,
+    "fields": {
+      "menu_id": "HRM_COURSE_CATALOG",
+      "menu_name": "Course Catalog",
+      "module": "HRM",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 7,
+    "fields": {
+      "menu_id": "HRM_RECOGNITION_BADGES",
+      "menu_name": "Recognition Badges",
+      "module": "HRM",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 8,
+    "fields": {
+      "menu_id": "HRM_OFFER_LETTER",
+      "menu_name": "Offer Letter Templates",
+      "module": "HRM",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.erpmenuitem",
+    "pk": 9,
+    "fields": {
+      "menu_id": "HRM_CONTRACT_TEMPLATE",
+      "menu_name": "Contract Templates",
+      "module": "HRM",
+      "applicable_toolbar_config": "NRQFXVDIOLBUG",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.rolepermission",
+    "pk": 1,
+    "fields": {
+      "role": 3,
+      "menu_item": 1,
+      "toolbar_override": "NRQFXVIOBUG",
+      "override_enabled": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.rolepermission",
+    "pk": 2,
+    "fields": {
+      "role": 3,
+      "menu_item": 2,
+      "toolbar_override": "NRQFXVIOBUG",
+      "override_enabled": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.rolepermission",
+    "pk": 3,
+    "fields": {
+      "role": 3,
+      "menu_item": 3,
+      "toolbar_override": "NRQFXVIOBUG",
+      "override_enabled": true,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.rolepermission",
+    "pk": 4,
+    "fields": {
+      "role": 4,
+      "menu_item": 1,
+      "toolbar_override": "NRQFXVDIOLBUG",
+      "override_enabled": false,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.rolepermission",
+    "pk": 5,
+    "fields": {
+      "role": 4,
+      "menu_item": 2,
+      "toolbar_override": "NRQFXVDIOLBUG",
+      "override_enabled": false,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "hrm.rolepermission",
+    "pk": 6,
+    "fields": {
+      "role": 4,
+      "menu_item": 3,
+      "toolbar_override": "NRQFXVDIOLBUG",
+      "override_enabled": false,
+      "created_at": "2024-01-01T00:00:00",
+      "updated_at": "2024-01-01T00:00:00"
+    }
+  }
+]

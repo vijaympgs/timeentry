@@ -1,0 +1,10 @@
+- `/admin/employee-management/` - Employee Management Administration
+- `/admin/organization-management/` - Organization Management Administration
+- `/admin/performance-management/` - Performance Management Administration
+- `/admin/learning-development/` - Learning & Development Administration
+- `/admin/compensation-payroll/` - Compensation & Payroll Administration
+- `/admin/recruitment-screening/` - Recruitment & Screening Administration
+- `/admin/time-attendance/` - Time & Attendance Administration
+- `/admin/badges-recognition/` - Badges & Recognition Administration
+- `/admin/tax-compliance/` - Tax & Compliance Administration
+- `/admin/` - Default Django admin (authentication only)

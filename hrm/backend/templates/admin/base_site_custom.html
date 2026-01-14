@@ -1,0 +1,35 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block extrastyle %}
+{{ block.super }}
+<style>
+    .admin-nav {
+        background: #f8f9fa;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #e1e5e9;
+        margin: -20px -20px 20px -20px;
+    }
+    
+    .admin-nav a {
+        color: #0078d4;
+        text-decoration: none;
+        margin-right: 2rem;
+        font-size: 14px;
+    }
+    
+    .admin-nav a:hover {
+        text-decoration: underline;
+    }
+</style>
+{% endblock %}
+
+{% block breadcrumbs %}
+{% if request.path != '/admin/' %}
+<div class="admin-nav">
+    <a href="/admin/">Home</a>
+    <a href="/admin/logout/">Logout</a>
+</div>
+{% endif %}
+{{ block.super }}
+{% endblock %}

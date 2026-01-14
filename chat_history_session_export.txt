@@ -1,0 +1,63 @@
+You are not here to "make the script run".
+You are here to behave like a senior enterprise engineer operating inside a real HR system.
+
+CRITICAL CONTEXT:
+There are already ~300 EmployeeRecord rows in the database.
+These represent authoritative employee identities.
+You must NEVER fabricate new employees for org structure purposes.
+
+HARD RULES (non-negotiable):
+1. Do NOT create fake people (no synthetic names, emails, usernames).
+2. Do NOT insert new EmployeeRecord rows for org chart purposes.
+3. Do NOT seed identity data (CEO, VP, managers, etc).
+4. You may ONLY:
+   - Use existing employees
+   - Assign hierarchy_level
+   - Assign manager relationships
+   - Assign department / org structure
+   - Create structural entities (OrgUnit, Position, relationships) if required
+5. Seeder logic must be idempotent and deterministic.
+6. Fix the management command so it works with existing employees, not by deleting or recreating them.
+
+ARCHITECTURAL INTENT:
+Org Chart = derived structure  
+Employee = authoritative master data  
+
+This mirrors real systems:
+- SAP SuccessFactors
+- Workday
+- PeopleSoft
+- Oracle HCM
+
+EXPECTED TECHNICAL FIX:
+Refactor the management command so that:
+- It selects existing employees (e.g. ordered by hire_date, employee_number, etc)
+- Assigns CEO = first suitable employee
+- Assigns department heads from existing employees
+- Builds hierarchy using updates, not inserts
+- Uses bulk_update where appropriate
+- Remains idempotent (safe to re-run)
+- Does not violate unique constraints
+- Does not delete employee records
+
+YOU ARE AN EXECUTOR, NOT A GUESSER:
+If something is ambiguous, pause and explain the risk.
+Do not invent data.
+Do not simulate reality.
+Operate on the actual dataset.
+
+Deliverables:
+- Rewrite the management command accordingly
+- Explain any assumptions you must make
+- Ensure it runs repeatedly with zero errors
+- Ensure zero new EmployeeRecord rows are created
+
+
+
+
+Now I need to fix the layout algorithm to create a more vertical tree structure. The current algorithm is spreading children horizontally, which creates a very wide layout. Let me modify it to create a proper vertical pyramid:
+
+
+
+create a end.md like start.md
+and few taks extra in the end.md 

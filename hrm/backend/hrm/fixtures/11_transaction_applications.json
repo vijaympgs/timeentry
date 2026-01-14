@@ -1,0 +1,33 @@
+[
+  {
+    "model": "hrm.applicationcapture",
+    "fields": {
+      "company": "550e8400-e29b-41d4-a716-446655440001",
+      "candidate": "550e8400-e29b-41d4-a716-446655440101",
+      "position": "550e8400-e29b-41d4-a716-446655440201",
+      "application_number": "APP2024001",
+      "application_date": "2024-01-15",
+      "source": "company_website",
+      "status": "under_review",
+      "resume_url": "/media/resumes/john_doe.pdf",
+      "cover_letter_url": "/media/cover_letters/john_doe.pdf",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "hrm.applicationcapture",
+    "fields": {
+      "company": "550e8400-e29b-41d4-a716-446655440001",
+      "candidate": "550e8400-e29b-41d4-a716-446655440102",
+      "position": "550e8400-e29b-41d4-a716-446655440202",
+      "application_number": "APP2024002",
+      "application_date": "2024-01-20",
+      "source": "linkedin",
+      "status": "screening",
+      "resume_url": "/media/resumes/jane_smith.pdf",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  }
+]
